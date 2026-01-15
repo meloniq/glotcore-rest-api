@@ -2,10 +2,10 @@
 /**
  * REST API: GP_REST_Translation_Sets_Controller class
  *
- * @package Meloniq\GpRest
+ * @package GlotCore\RestApi
  */
 
-namespace Meloniq\GpRest;
+namespace GlotCore\RestApi;
 
 use GP;
 use GP_Locales;
@@ -49,7 +49,7 @@ class GP_REST_Translation_Sets_Controller extends GP_REST_Controller {
 					'permission_callback' => array( $this, 'get_items_permissions_check' ),
 					'args'                => array(
 						'project_id' => array(
-							'description'       => __( 'The ID of the project to retrieve translation sets for.', 'gp-rest' ),
+							'description'       => __( 'The ID of the project to retrieve translation sets for.', 'glotcore-rest-api' ),
 							'type'              => 'integer',
 							'required'          => true,
 							'sanitize_callback' => 'absint',
@@ -174,7 +174,7 @@ class GP_REST_Translation_Sets_Controller extends GP_REST_Controller {
 			return new WP_REST_Response(
 				array(
 					'code'    => 'set_missing_parameters',
-					'message' => __( 'Name and slug are required.', 'gp-rest' ),
+					'message' => __( 'Name and slug are required.', 'glotcore-rest-api' ),
 				),
 				400
 			);
@@ -263,7 +263,7 @@ class GP_REST_Translation_Sets_Controller extends GP_REST_Controller {
 			return new WP_REST_Response(
 				array(
 					'code'    => 'set_missing_parameters',
-					'message' => __( 'Name and slug are required.', 'gp-rest' ),
+					'message' => __( 'Name and slug are required.', 'glotcore-rest-api' ),
 				),
 				400
 			);
@@ -450,28 +450,28 @@ class GP_REST_Translation_Sets_Controller extends GP_REST_Controller {
 			'type'       => 'object',
 			'properties' => array(
 				'id'         => array(
-					'description' => __( 'Unique identifier for the translation.', 'gp-rest' ),
+					'description' => __( 'Unique identifier for the translation.', 'glotcore-rest-api' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'project_id' => array(
-					'description' => __( 'The ID of the project this translation set belongs to.', 'gp-rest' ),
+					'description' => __( 'The ID of the project this translation set belongs to.', 'glotcore-rest-api' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),
 				'locale'     => array(
-					'description' => __( 'The locale of the translation set.', 'gp-rest' ),
+					'description' => __( 'The locale of the translation set.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),
 				'name'       => array(
-					'description' => __( 'The name of the translation set.', 'gp-rest' ),
+					'description' => __( 'The name of the translation set.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),
 				'slug'       => array(
-					'description' => __( 'The slug of the translation set.', 'gp-rest' ),
+					'description' => __( 'The slug of the translation set.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),

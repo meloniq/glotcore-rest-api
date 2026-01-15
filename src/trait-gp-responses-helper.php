@@ -2,10 +2,10 @@
 /**
  * Trait: GP_Responses_Helper class
  *
- * @package Meloniq\GpRest
+ * @package GlotCore\RestApi
  */
 
-namespace Meloniq\GpRest;
+namespace GlotCore\RestApi;
 
 use WP_REST_Response;
 
@@ -23,7 +23,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'glossary_not_found',
-				'message' => __( 'Glossary not found.', 'gp-rest' ),
+				'message' => __( 'Glossary not found.', 'glotcore-rest-api' ),
 			),
 			404
 		);
@@ -38,7 +38,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'glossary_already_exists',
-				'message' => __( 'A glossary for this translation set already exists.', 'gp-rest' ),
+				'message' => __( 'A glossary for this translation set already exists.', 'glotcore-rest-api' ),
 			),
 			409
 		);
@@ -53,7 +53,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'glossary_creation_failed',
-				'message' => __( 'Failed to create glossary.', 'gp-rest' ),
+				'message' => __( 'Failed to create glossary.', 'glotcore-rest-api' ),
 			),
 			500
 		);
@@ -68,7 +68,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'glossary_update_failed',
-				'message' => __( 'Failed to update glossary.', 'gp-rest' ),
+				'message' => __( 'Failed to update glossary.', 'glotcore-rest-api' ),
 			),
 			500
 		);
@@ -83,7 +83,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'glossary_deletion_failed',
-				'message' => __( 'Failed to delete glossary.', 'gp-rest' ),
+				'message' => __( 'Failed to delete glossary.', 'glotcore-rest-api' ),
 			),
 			500
 		);
@@ -98,7 +98,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'glossary_entry_not_found',
-				'message' => __( 'Glossary entry not found.', 'gp-rest' ),
+				'message' => __( 'Glossary entry not found.', 'glotcore-rest-api' ),
 			),
 			404
 		);
@@ -113,7 +113,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'glossary_entry_already_exists',
-				'message' => __( 'A glossary entry for this translation set already exists.', 'gp-rest' ),
+				'message' => __( 'A glossary entry for this translation set already exists.', 'glotcore-rest-api' ),
 			),
 			409
 		);
@@ -128,7 +128,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'glossary_entry_creation_failed',
-				'message' => __( 'Failed to create glossary entry.', 'gp-rest' ),
+				'message' => __( 'Failed to create glossary entry.', 'glotcore-rest-api' ),
 			),
 			500
 		);
@@ -143,7 +143,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'glossary_entry_update_failed',
-				'message' => __( 'Failed to update glossary entry.', 'gp-rest' ),
+				'message' => __( 'Failed to update glossary entry.', 'glotcore-rest-api' ),
 			),
 			500
 		);
@@ -158,7 +158,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'glossary_entry_deletion_failed',
-				'message' => __( 'Failed to delete glossary entry.', 'gp-rest' ),
+				'message' => __( 'Failed to delete glossary entry.', 'glotcore-rest-api' ),
 			),
 			500
 		);
@@ -173,7 +173,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'locale_not_found',
-				'message' => __( 'Locale not found.', 'gp-rest' ),
+				'message' => __( 'Locale not found.', 'glotcore-rest-api' ),
 			),
 			404
 		);
@@ -188,7 +188,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'original_not_found',
-				'message' => __( 'Original string not found.', 'gp-rest' ),
+				'message' => __( 'Original string not found.', 'glotcore-rest-api' ),
 			),
 			404
 		);
@@ -203,7 +203,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'original_already_exists',
-				'message' => __( 'An identical original string already exists.', 'gp-rest' ),
+				'message' => __( 'An identical original string already exists.', 'glotcore-rest-api' ),
 			),
 			409
 		);
@@ -218,7 +218,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'original_creation_failed',
-				'message' => __( 'Failed to create original string.', 'gp-rest' ),
+				'message' => __( 'Failed to create original string.', 'glotcore-rest-api' ),
 			),
 			500
 		);
@@ -233,7 +233,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'original_update_failed',
-				'message' => __( 'Failed to update original string.', 'gp-rest' ),
+				'message' => __( 'Failed to update original string.', 'glotcore-rest-api' ),
 			),
 			500
 		);
@@ -248,7 +248,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'original_deletion_failed',
-				'message' => __( 'Failed to delete original string.', 'gp-rest' ),
+				'message' => __( 'Failed to delete original string.', 'glotcore-rest-api' ),
 			),
 			500
 		);
@@ -263,7 +263,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'project_not_found',
-				'message' => __( 'Project not found.', 'gp-rest' ),
+				'message' => __( 'Project not found.', 'glotcore-rest-api' ),
 			),
 			404
 		);
@@ -278,7 +278,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'project_already_exists',
-				'message' => __( 'An identical project already exists.', 'gp-rest' ),
+				'message' => __( 'An identical project already exists.', 'glotcore-rest-api' ),
 			),
 			409
 		);
@@ -293,7 +293,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'project_creation_failed',
-				'message' => __( 'Failed to create project.', 'gp-rest' ),
+				'message' => __( 'Failed to create project.', 'glotcore-rest-api' ),
 			),
 			500
 		);
@@ -308,7 +308,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'project_update_failed',
-				'message' => __( 'Failed to update project.', 'gp-rest' ),
+				'message' => __( 'Failed to update project.', 'glotcore-rest-api' ),
 			),
 			500
 		);
@@ -323,7 +323,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'project_deletion_failed',
-				'message' => __( 'Failed to delete project.', 'gp-rest' ),
+				'message' => __( 'Failed to delete project.', 'glotcore-rest-api' ),
 			),
 			500
 		);
@@ -338,7 +338,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'project_permission_not_found',
-				'message' => __( 'Project permission not found.', 'gp-rest' ),
+				'message' => __( 'Project permission not found.', 'glotcore-rest-api' ),
 			),
 			404
 		);
@@ -353,7 +353,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'project_permission_already_exists',
-				'message' => __( 'A project permission for this project already exists.', 'gp-rest' ),
+				'message' => __( 'A project permission for this project already exists.', 'glotcore-rest-api' ),
 			),
 			409
 		);
@@ -368,7 +368,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'project_permission_creation_failed',
-				'message' => __( 'Failed to create project permission.', 'gp-rest' ),
+				'message' => __( 'Failed to create project permission.', 'glotcore-rest-api' ),
 			),
 			500
 		);
@@ -383,7 +383,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'project_permission_update_failed',
-				'message' => __( 'Failed to update project permission.', 'gp-rest' ),
+				'message' => __( 'Failed to update project permission.', 'glotcore-rest-api' ),
 			),
 			500
 		);
@@ -398,7 +398,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'project_permission_deletion_failed',
-				'message' => __( 'Failed to delete project permission.', 'gp-rest' ),
+				'message' => __( 'Failed to delete project permission.', 'glotcore-rest-api' ),
 			),
 			500
 		);
@@ -413,7 +413,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'translation_not_found',
-				'message' => __( 'Translation not found.', 'gp-rest' ),
+				'message' => __( 'Translation not found.', 'glotcore-rest-api' ),
 			),
 			404
 		);
@@ -428,7 +428,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'translation_already_exists',
-				'message' => __( 'An identical translation already exists.', 'gp-rest' ),
+				'message' => __( 'An identical translation already exists.', 'glotcore-rest-api' ),
 			),
 			409
 		);
@@ -443,7 +443,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'translation_creation_failed',
-				'message' => __( 'Failed to create translation.', 'gp-rest' ),
+				'message' => __( 'Failed to create translation.', 'glotcore-rest-api' ),
 			),
 			500
 		);
@@ -458,7 +458,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'translation_update_failed',
-				'message' => __( 'Failed to update translation.', 'gp-rest' ),
+				'message' => __( 'Failed to update translation.', 'glotcore-rest-api' ),
 			),
 			500
 		);
@@ -473,7 +473,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'translation_deletion_failed',
-				'message' => __( 'Failed to delete translation.', 'gp-rest' ),
+				'message' => __( 'Failed to delete translation.', 'glotcore-rest-api' ),
 			),
 			500
 		);
@@ -488,7 +488,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'translation_set_not_found',
-				'message' => __( 'Translation set not found.', 'gp-rest' ),
+				'message' => __( 'Translation set not found.', 'glotcore-rest-api' ),
 			),
 			404
 		);
@@ -503,7 +503,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'translation_set_already_exists',
-				'message' => __( 'A translation set with the same project, locale, and slug already exists.', 'gp-rest' ),
+				'message' => __( 'A translation set with the same project, locale, and slug already exists.', 'glotcore-rest-api' ),
 			),
 			409
 		);
@@ -518,7 +518,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'translation_set_creation_failed',
-				'message' => __( 'Failed to create translation set.', 'gp-rest' ),
+				'message' => __( 'Failed to create translation set.', 'glotcore-rest-api' ),
 			),
 			500
 		);
@@ -533,7 +533,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'translation_set_update_failed',
-				'message' => __( 'Failed to update translation set.', 'gp-rest' ),
+				'message' => __( 'Failed to update translation set.', 'glotcore-rest-api' ),
 			),
 			500
 		);
@@ -548,7 +548,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'translation_set_deletion_failed',
-				'message' => __( 'Failed to delete translation set.', 'gp-rest' ),
+				'message' => __( 'Failed to delete translation set.', 'glotcore-rest-api' ),
 			),
 			500
 		);
@@ -563,7 +563,7 @@ trait GP_Responses_Helper {
 		return new WP_REST_Response(
 			array(
 				'code'    => 'user_not_found',
-				'message' => __( 'User not found.', 'gp-rest' ),
+				'message' => __( 'User not found.', 'glotcore-rest-api' ),
 			),
 			404
 		);

@@ -2,10 +2,10 @@
 /**
  * REST API: GP_REST_Originals_Controller class
  *
- * @package Meloniq\GpRest
+ * @package GlotCore\RestApi
  */
 
-namespace Meloniq\GpRest;
+namespace GlotCore\RestApi;
 
 use GP;
 use GP_Original;
@@ -63,7 +63,7 @@ class GP_REST_Originals_Controller extends GP_REST_Controller {
 					'permission_callback' => array( $this, 'get_items_permissions_check' ),
 					'args'                => array(
 						'project_id' => array(
-							'description'       => __( 'The ID of the project to retrieve originals for.', 'gp-rest' ),
+							'description'       => __( 'The ID of the project to retrieve originals for.', 'glotcore-rest-api' ),
 							'type'              => 'integer',
 							'required'          => true,
 							'sanitize_callback' => 'absint',
@@ -308,62 +308,62 @@ class GP_REST_Originals_Controller extends GP_REST_Controller {
 			'type'       => 'object',
 			'properties' => array(
 				'id'         => array(
-					'description' => __( 'Unique identifier for the original.', 'gp-rest' ),
+					'description' => __( 'Unique identifier for the original.', 'glotcore-rest-api' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'project_id' => array(
-					'description' => __( 'The ID of the project this original belongs to.', 'gp-rest' ),
+					'description' => __( 'The ID of the project this original belongs to.', 'glotcore-rest-api' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'context'    => array(
-					'description' => __( 'The context of the original.', 'gp-rest' ),
+					'description' => __( 'The context of the original.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'singular'   => array(
-					'description' => __( 'The singular text of the original.', 'gp-rest' ),
+					'description' => __( 'The singular text of the original.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'plural'     => array(
-					'description' => __( 'The plural text of the original, if applicable.', 'gp-rest' ),
+					'description' => __( 'The plural text of the original, if applicable.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'comment'    => array(
-					'description' => __( 'The comment associated with the original.', 'gp-rest' ),
+					'description' => __( 'The comment associated with the original.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'references' => array(
-					'description' => __( 'References for the original.', 'gp-rest' ),
+					'description' => __( 'References for the original.', 'glotcore-rest-api' ),
 					'type'        => 'array',
 					'items'       => array( 'type' => 'string' ),
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'status'     => array(
-					'description' => __( 'The status of the original.', 'gp-rest' ),
+					'description' => __( 'The status of the original.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'priority'   => array(
-					'description' => __( 'The priority of the original.', 'gp-rest' ),
+					'description' => __( 'The priority of the original.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'date_added' => array(
-					'description' => __( 'The date the original was added.', 'gp-rest' ),
+					'description' => __( 'The date the original was added.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'format'      => 'date-time',
 					'context'     => array( 'view', 'edit', 'embed' ),

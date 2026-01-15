@@ -2,10 +2,10 @@
 /**
  * REST API: GP_REST_Project_Permissions_Controller class
  *
- * @package Meloniq\GpRest
+ * @package GlotCore\RestApi
  */
 
-namespace Meloniq\GpRest;
+namespace GlotCore\RestApi;
 
 use GP;
 use GP_Locales;
@@ -362,33 +362,33 @@ class GP_REST_Project_Permissions_Controller extends GP_REST_Controller {
 			'type'       => 'object',
 			'properties' => array(
 				'id'          => array(
-					'description' => __( 'Unique identifier for the project permission.', 'gp-rest' ),
+					'description' => __( 'Unique identifier for the project permission.', 'glotcore-rest-api' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'user_id'     => array(
-					'description' => __( 'User ID associated with the permission.', 'gp-rest' ),
+					'description' => __( 'User ID associated with the permission.', 'glotcore-rest-api' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),
 				'project_id'  => array(
-					'description' => __( 'Project ID associated with the permission.', 'gp-rest' ),
+					'description' => __( 'Project ID associated with the permission.', 'glotcore-rest-api' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),
 				'action'      => array(
-					'description' => __( 'Action permitted (e.g., approve).', 'gp-rest' ),
+					'description' => __( 'Action permitted (e.g., approve).', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),
 				'locale_slug' => array(
-					'description' => __( 'Locale slug associated with the permission.', 'gp-rest' ),
+					'description' => __( 'Locale slug associated with the permission.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),
 				'set_slug'    => array(
-					'description' => __( 'Translation set slug associated with the permission.', 'gp-rest' ),
+					'description' => __( 'Translation set slug associated with the permission.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),

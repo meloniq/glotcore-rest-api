@@ -2,10 +2,10 @@
 /**
  * Trait: GP_Query_Params_Helper class
  *
- * @package Meloniq\GpRest
+ * @package GlotCore\RestApi
  */
 
-namespace Meloniq\GpRest;
+namespace GlotCore\RestApi;
 
 use WP_REST_Request;
 

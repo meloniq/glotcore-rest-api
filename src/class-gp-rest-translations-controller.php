@@ -2,10 +2,10 @@
 /**
  * REST API: GP_REST_Translations_Controller class
  *
- * @package Meloniq\GpRest
+ * @package GlotCore\RestApi
  */
 
-namespace Meloniq\GpRest;
+namespace GlotCore\RestApi;
 
 use GP;
 use GP_Locales;
@@ -204,7 +204,7 @@ class GP_REST_Translations_Controller extends GP_REST_Controller {
 			return new WP_REST_Response(
 				array(
 					'code'    => 'translation_errors',
-					'message' => __( 'Translation contains errors.', 'gp-rest' ),
+					'message' => __( 'Translation contains errors.', 'glotcore-rest-api' ),
 					'errors'  => $errors,
 				),
 				400
@@ -255,7 +255,7 @@ class GP_REST_Translations_Controller extends GP_REST_Controller {
 			return new WP_REST_Response(
 				array(
 					'code'    => 'invalid_translation_data',
-					'message' => __( 'Invalid translation data.', 'gp-rest' ),
+					'message' => __( 'Invalid translation data.', 'glotcore-rest-api' ),
 					'errors'  => $new_translation->errors,
 				),
 				400
@@ -344,7 +344,7 @@ class GP_REST_Translations_Controller extends GP_REST_Controller {
 			return new WP_REST_Response(
 				array(
 					'code'    => 'translation_errors',
-					'message' => __( 'Translation contains errors.', 'gp-rest' ),
+					'message' => __( 'Translation contains errors.', 'glotcore-rest-api' ),
 					'errors'  => $errors,
 				),
 				400
@@ -526,34 +526,34 @@ class GP_REST_Translations_Controller extends GP_REST_Controller {
 			'type'       => 'object',
 			'properties' => array(
 				'id'                 => array(
-					'description' => __( 'Unique identifier for the translation.', 'gp-rest' ),
+					'description' => __( 'Unique identifier for the translation.', 'glotcore-rest-api' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'translation_set_id' => array(
-					'description' => __( 'Identifier for the translation set.', 'gp-rest' ),
+					'description' => __( 'Identifier for the translation set.', 'glotcore-rest-api' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),
 				'original_id'        => array(
-					'description' => __( 'Identifier for the original string.', 'gp-rest' ),
+					'description' => __( 'Identifier for the original string.', 'glotcore-rest-api' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),
 				'translations'       => array(
-					'description' => __( 'An array of translations for the original string.', 'gp-rest' ),
+					'description' => __( 'An array of translations for the original string.', 'glotcore-rest-api' ),
 					'type'        => 'object',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),
 				'status'             => array(
-					'description' => __( 'The status of the translation.', 'gp-rest' ),
+					'description' => __( 'The status of the translation.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'enum'        => array( 'current', 'waiting', 'fuzzy', 'old' ),
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),
 				'warnings'           => array(
-					'description' => __( 'An array of warnings associated with the translation.', 'gp-rest' ),
+					'description' => __( 'An array of warnings associated with the translation.', 'glotcore-rest-api' ),
 					'type'        => 'array',
 					'items'       => array(
 						'type' => 'string',

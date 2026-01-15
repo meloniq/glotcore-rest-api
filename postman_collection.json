@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "433b625c-9168-4c06-ad45-6b4a94d581d9",
-		"name": "GP REST",
+		"name": "GlotCore REST API",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "3761381"
 	},

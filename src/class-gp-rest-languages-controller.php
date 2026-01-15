@@ -2,10 +2,10 @@
 /**
  * REST API: GP_REST_Languages_Controller class
  *
- * @package Meloniq\GpRest
+ * @package GlotCore\RestApi
  */
 
-namespace Meloniq\GpRest;
+namespace GlotCore\RestApi;
 
 use GP;
 use GP_Locale;
@@ -173,19 +173,19 @@ class GP_REST_Languages_Controller extends GP_REST_Controller {
 			'type'       => 'object',
 			'properties' => array(
 				'english_name' => array(
-					'description' => __( 'The English name of the language.', 'gp-rest' ),
+					'description' => __( 'The English name of the language.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'native_name'  => array(
-					'description' => __( 'The native name of the language.', 'gp-rest' ),
+					'description' => __( 'The native name of the language.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'code'         => array(
-					'description' => __( 'The language code.', 'gp-rest' ),
+					'description' => __( 'The language code.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,

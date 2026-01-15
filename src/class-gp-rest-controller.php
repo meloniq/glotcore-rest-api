@@ -2,10 +2,10 @@
 /**
  * REST API: GP_REST_Controller class
  *
- * @package Meloniq\GpRest
+ * @package GlotCore\RestApi
  */
 
-namespace Meloniq\GpRest;
+namespace GlotCore\RestApi;
 
 use GP;
 use WP_REST_Controller;

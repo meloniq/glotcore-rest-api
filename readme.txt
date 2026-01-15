@@ -1,4 +1,4 @@
-=== GP REST ===
+=== GlotCore REST API ===
 Contributors: meloniq
 Tags: glotpress, rest, api, endpoint, interface
 Tested up to: 6.9
@@ -10,7 +10,7 @@ Extends GlotPress with REST API endpoints for programmatic access to translation
 
 == Description ==
 
-GP REST extends GlotPress by exposing a REST API, allowing developers to integrate GlotPress with external systems, automate workflows, and build custom applications on top of the GlotPress translation platform.
+GlotCore REST API extends GlotPress by exposing a REST API, allowing developers to integrate GlotPress with external systems, automate workflows, and build custom applications on top of the GlotPress translation platform.
 
 ### Experimental Notice
 
@@ -47,7 +47,7 @@ The plugin introduces REST API endpoints for interacting with GlotPress data:
 
 == Configuration ==
 
-After installation, GP REST is ready to use.
+After installation, GlotCore REST API is ready to use.
 
 To explore the API, you may use tools like **Postman**.
 Postman collection and environment files are included with the plugin.

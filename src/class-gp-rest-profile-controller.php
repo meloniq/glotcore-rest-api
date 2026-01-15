@@ -2,10 +2,10 @@
 /**
  * REST API: GP_REST_Profile_Controller class
  *
- * @package Meloniq\GpRest
+ * @package GlotCore\RestApi
  */
 
-namespace Meloniq\GpRest;
+namespace GlotCore\RestApi;
 
 use WP_REST_Response;
 use WP_REST_Request;
@@ -57,7 +57,7 @@ class GP_REST_Profile_Controller extends GP_REST_Controller {
 			array(
 				'args' => array(
 					'id' => array(
-						'description' => __( 'Unique identifier for the user.', 'gp-rest' ),
+						'description' => __( 'Unique identifier for the user.', 'glotcore-rest-api' ),
 						'type'        => 'integer',
 					),
 				),
@@ -209,26 +209,26 @@ class GP_REST_Profile_Controller extends GP_REST_Controller {
 			'type'       => 'object',
 			'properties' => array(
 				'user_id'           => array(
-					'description' => __( 'Unique identifier for the user.', 'gp-rest' ),
+					'description' => __( 'Unique identifier for the user.', 'glotcore-rest-api' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'user_display_name' => array(
-					'description' => __( 'The display name of the user.', 'gp-rest' ),
+					'description' => __( 'The display name of the user.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'user_registered'   => array(
-					'description' => __( 'The date the user registered.', 'gp-rest' ),
+					'description' => __( 'The date the user registered.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'format'      => 'date-time',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'recent_projects'   => array(
-					'description' => __( 'Recent projects the user has contributed to.', 'gp-rest' ),
+					'description' => __( 'Recent projects the user has contributed to.', 'glotcore-rest-api' ),
 					'type'        => 'array',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
@@ -237,7 +237,7 @@ class GP_REST_Profile_Controller extends GP_REST_Controller {
 					),
 				),
 				'locales'           => array(
-					'description' => __( 'Locales the user is familiar with.', 'gp-rest' ),
+					'description' => __( 'Locales the user is familiar with.', 'glotcore-rest-api' ),
 					'type'        => 'array',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
@@ -246,7 +246,7 @@ class GP_REST_Profile_Controller extends GP_REST_Controller {
 					),
 				),
 				'permissions'       => array(
-					'description' => __( 'Permissions the user has.', 'gp-rest' ),
+					'description' => __( 'Permissions the user has.', 'glotcore-rest-api' ),
 					'type'        => 'array',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,

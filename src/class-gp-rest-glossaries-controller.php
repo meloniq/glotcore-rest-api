@@ -2,10 +2,10 @@
 /**
  * REST API: GP_REST_Glossaries_Controller class
  *
- * @package Meloniq\GpRest
+ * @package GlotCore\RestApi
  */
 
-namespace Meloniq\GpRest;
+namespace GlotCore\RestApi;
 
 use GP;
 use GP_Glossary;
@@ -395,18 +395,18 @@ class GP_REST_Glossaries_Controller extends GP_REST_Controller {
 			'type'       => 'object',
 			'properties' => array(
 				'id'                 => array(
-					'description' => __( 'Unique identifier for the glossary.', 'gp-rest' ),
+					'description' => __( 'Unique identifier for the glossary.', 'glotcore-rest-api' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'translation_set_id' => array(
-					'description' => __( 'The ID of the translation set associated with the glossary.', 'gp-rest' ),
+					'description' => __( 'The ID of the translation set associated with the glossary.', 'glotcore-rest-api' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),
 				'description'        => array(
-					'description' => __( 'The description of the glossary.', 'gp-rest' ),
+					'description' => __( 'The description of the glossary.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),

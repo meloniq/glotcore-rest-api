@@ -2,10 +2,10 @@
 /**
  * REST API: GP_REST_Projects_Controller class
  *
- * @package Meloniq\GpRest
+ * @package GlotCore\RestApi
  */
 
-namespace Meloniq\GpRest;
+namespace GlotCore\RestApi;
 
 use GP;
 use GP_Project;
@@ -46,7 +46,7 @@ class GP_REST_Projects_Controller extends GP_REST_Controller {
 					'permission_callback' => array( $this, 'get_items_permissions_check' ),
 					'args'                => array(
 						'parent_project_id' => array(
-							'description'       => __( 'Filter projects by parent project ID.', 'gp-rest' ),
+							'description'       => __( 'Filter projects by parent project ID.', 'glotcore-rest-api' ),
 							'type'              => 'integer',
 							'sanitize_callback' => 'absint',
 							'required'          => false,
@@ -160,7 +160,7 @@ class GP_REST_Projects_Controller extends GP_REST_Controller {
 			return new WP_REST_Response(
 				array(
 					'code'    => 'project_missing_parameters',
-					'message' => __( 'Name and slug are required.', 'gp-rest' ),
+					'message' => __( 'Name and slug are required.', 'glotcore-rest-api' ),
 				),
 				400
 			);
@@ -248,7 +248,7 @@ class GP_REST_Projects_Controller extends GP_REST_Controller {
 			return new WP_REST_Response(
 				array(
 					'code'    => 'project_missing_parameters',
-					'message' => __( 'Name and slug are required.', 'gp-rest' ),
+					'message' => __( 'Name and slug are required.', 'glotcore-rest-api' ),
 				),
 				400
 			);
@@ -453,38 +453,38 @@ class GP_REST_Projects_Controller extends GP_REST_Controller {
 			'type'       => 'object',
 			'properties' => array(
 				'id'                  => array(
-					'description' => __( 'Unique identifier for the project.', 'gp-rest' ),
+					'description' => __( 'Unique identifier for the project.', 'glotcore-rest-api' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'name'                => array(
-					'description' => __( 'The name of the project.', 'gp-rest' ),
+					'description' => __( 'The name of the project.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),
 				'slug'                => array(
-					'description' => __( 'The slug of the project.', 'gp-rest' ),
+					'description' => __( 'The slug of the project.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),
 				'description'         => array(
-					'description' => __( 'The description of the project.', 'gp-rest' ),
+					'description' => __( 'The description of the project.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),
 				'source_url_template' => array(
-					'description' => __( 'The source URL template of the project.', 'gp-rest' ),
+					'description' => __( 'The source URL template of the project.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),
 				'parent_project_id'   => array(
-					'description' => __( 'The parent project ID.', 'gp-rest' ),
+					'description' => __( 'The parent project ID.', 'glotcore-rest-api' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),
 				'active'              => array(
-					'description' => __( 'Whether the project is active.', 'gp-rest' ),
+					'description' => __( 'Whether the project is active.', 'glotcore-rest-api' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),

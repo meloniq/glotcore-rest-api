@@ -2,10 +2,10 @@
 /**
  * REST API: GP_REST_Formats_Controller class
  *
- * @package Meloniq\GpRest
+ * @package GlotCore\RestApi
  */
 
-namespace Meloniq\GpRest;
+namespace GlotCore\RestApi;
 
 use GP;
 use GP_Format;
@@ -146,26 +146,26 @@ class GP_REST_Formats_Controller extends GP_REST_Controller {
 			'type'       => 'object',
 			'properties' => array(
 				'name'             => array(
-					'description' => __( 'The name of the format.', 'gp-rest' ),
+					'description' => __( 'The name of the format.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'extension'        => array(
-					'description' => __( 'The file extension for the format.', 'gp-rest' ),
+					'description' => __( 'The file extension for the format.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'alt_extensions'   => array(
-					'description' => __( 'Alternative file extensions for the format.', 'gp-rest' ),
+					'description' => __( 'Alternative file extensions for the format.', 'glotcore-rest-api' ),
 					'type'        => 'array',
 					'items'       => array( 'type' => 'string' ),
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'filename_pattern' => array(
-					'description' => __( 'The filename pattern for the format.', 'gp-rest' ),
+					'description' => __( 'The filename pattern for the format.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,

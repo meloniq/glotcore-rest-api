@@ -2,7 +2,7 @@
     "$schema": "https://playground.wordpress.net/blueprint-schema.json",
     "login": true,
     "siteOptions": {
-        "blogname": "GP REST"
+        "blogname": "GlotCore REST API"
     },
     "landingPage": "/projects/",
     "steps": [

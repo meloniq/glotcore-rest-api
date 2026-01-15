@@ -2,10 +2,10 @@
 /**
  * REST API: GP_REST_Glossary_Entries_Controller class
  *
- * @package Meloniq\GpRest
+ * @package GlotCore\RestApi
  */
 
-namespace Meloniq\GpRest;
+namespace GlotCore\RestApi;
 
 use GP;
 use GP_Glossary_Entry;
@@ -161,7 +161,7 @@ class GP_REST_Glossary_Entries_Controller extends GP_REST_Controller {
 			return new WP_REST_Response(
 				array(
 					'code'    => 'invalid_glossary_entry_data',
-					'message' => __( 'Term and translation are required fields.', 'gp-rest' ),
+					'message' => __( 'Term and translation are required fields.', 'glotcore-rest-api' ),
 				),
 				400
 			);
@@ -252,7 +252,7 @@ class GP_REST_Glossary_Entries_Controller extends GP_REST_Controller {
 			return new WP_REST_Response(
 				array(
 					'code'    => 'invalid_glossary_entry_data',
-					'message' => __( 'Term and translation are required fields.', 'gp-rest' ),
+					'message' => __( 'Term and translation are required fields.', 'glotcore-rest-api' ),
 				),
 				400
 			);
@@ -454,39 +454,39 @@ class GP_REST_Glossary_Entries_Controller extends GP_REST_Controller {
 			'type'       => 'object',
 			'properties' => array(
 				'id'             => array(
-					'description' => __( 'Unique identifier for the glossary entry.', 'gp-rest' ),
+					'description' => __( 'Unique identifier for the glossary entry.', 'glotcore-rest-api' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'glossary_id'    => array(
-					'description' => __( 'Identifier of the glossary this entry belongs to.', 'gp-rest' ),
+					'description' => __( 'Identifier of the glossary this entry belongs to.', 'glotcore-rest-api' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,
 				),
 				'term'           => array(
-					'description' => __( 'The term of the glossary entry.', 'gp-rest' ),
+					'description' => __( 'The term of the glossary entry.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),
 				'translation'    => array(
-					'description' => __( 'The translation of the term.', 'gp-rest' ),
+					'description' => __( 'The translation of the term.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),
 				'part_of_speech' => array(
-					'description' => __( 'The part of speech of the term.', 'gp-rest' ),
+					'description' => __( 'The part of speech of the term.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),
 				'comment'        => array(
-					'description' => __( 'Additional comments about the glossary entry.', 'gp-rest' ),
+					'description' => __( 'Additional comments about the glossary entry.', 'glotcore-rest-api' ),
 					'type'        => 'string',
 					'context'     => array( 'view', 'edit', 'embed' ),
 				),
 				'last_edited_by' => array(
-					'description' => __( 'User ID of the last editor of the glossary entry.', 'gp-rest' ),
+					'description' => __( 'User ID of the last editor of the glossary entry.', 'glotcore-rest-api' ),
 					'type'        => 'integer',
 					'context'     => array( 'view', 'edit', 'embed' ),
 					'readonly'    => true,

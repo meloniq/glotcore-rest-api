@@ -3,10 +3,10 @@
  * Trait: GP_Profile_Helper class
  * Taken from GlotPress: /gp-includes/routes/profile.php
  *
- * @package Meloniq\GpRest
+ * @package GlotCore\RestApi
  */
 
-namespace Meloniq\GpRest;
+namespace GlotCore\RestApi;
 
 use GP;
 use GP_Locales;
