@@ -51,6 +51,7 @@ function gp_init() {
 	require_once __DIR__ . '/src/class-gp-rest-formats-controller.php';
 	require_once __DIR__ . '/src/class-gp-rest-glossaries-controller.php';
 	require_once __DIR__ . '/src/class-gp-rest-glossary-entries-controller.php';
+	require_once __DIR__ . '/src/class-gp-rest-import-controller.php';
 	require_once __DIR__ . '/src/class-gp-rest-languages-controller.php';
 	require_once __DIR__ . '/src/class-gp-rest-originals-controller.php';
 	require_once __DIR__ . '/src/class-gp-rest-projects-controller.php';
@@ -63,6 +64,7 @@ function gp_init() {
 	$glotcore_restapi['formats']             = new GP_REST_Formats_Controller();
 	$glotcore_restapi['glossaries']          = new GP_REST_Glossaries_Controller();
 	$glotcore_restapi['glossary-entries']    = new GP_REST_Glossary_Entries_Controller();
+	$glotcore_restapi['import']              = new GP_REST_Import_Controller();
 	$glotcore_restapi['languages']           = new GP_REST_Languages_Controller();
 	$glotcore_restapi['originals']           = new GP_REST_Originals_Controller();
 	$glotcore_restapi['projects']            = new GP_REST_Projects_Controller();
